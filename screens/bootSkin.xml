@@ -1,0 +1,16 @@
+<screen>
+	<animations>
+		<timeline name="loading">
+			<animation prop="translate_y" target="boot_skin_img" start="-240px" end="60px" duration="240" />
+			<animation prop="translate_y" target="boot_skin_img" start="60px" end="-30px" duration="200" delay="240" />
+			<animation prop="translate_y" target="boot_skin_img" start="-30px" end="15px" duration="160" delay="440" />
+			<animation prop="translate_y" target="boot_skin_img" start="15px" end="0px" duration="140" delay="600" />
+		</timeline>
+	</animations>
+	<view>
+		<remove_style_all />
+		<lv_image name="boot_skin_img" src="bootSkinImg" />
+		<play_timeline_event target="self" timeline="loading" trigger="screen_loaded" />
+		<screen_create_event screen="mainScreen" anim_type="out_bottom" trigger="all" duration="100" delay="2280" />
+	</view>
+</screen>
